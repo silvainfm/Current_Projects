@@ -9,7 +9,7 @@ chase_df = pd.read_excel('sales_data', parse_dates=True)
 # getting a list of the columns of the df and rearrange
 col_list = chase_df.columns.tolist()
 
-# fill the nas with 0 for easier manipulation
+# fill the NAs with 0 for easier manipulation
 chase_df = chase_df.fillna(0)
 
 # getting only the columns wanted
@@ -33,7 +33,7 @@ states = []
 ‘MO’, ‘MP’, ‘MS’, ‘MT’, ‘NC’, ‘ND’, ‘NE’, ‘NH’, ‘NJ’, ‘NM’, ‘NV’, ‘NY’, ‘OH’, ‘OK’, ‘OR’, ‘PA’, ‘PR’, ‘RI’, ‘SC’, ‘SD’, ‘TN’, ‘TX’, ‘UM’, ‘UT’, ‘VA’, ‘VI’, 
 ‘VT’, ‘WA’, ‘WI’, ‘WV’, ‘WY’
 '''
-# create dicitonary to hold keywords for each category
+# create dictionary to hold keywords for each category
 keyword_dic = {}
 
 # get all row containing list of keywords
@@ -96,3 +96,5 @@ chase_df2.to_excel(writer, sheet_name = 'category2')
 chase_df3.to_excel(writer, sheet_name = 'category3')
 
 chase_df.to_excel(writer, sheet_name = 'Full_data')
+
+writer.save(
