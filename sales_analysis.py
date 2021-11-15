@@ -97,4 +97,4 @@ chase_df3.to_excel(writer, sheet_name = 'category3')
 
 chase_df.to_excel(writer, sheet_name = 'Full_data')
 
-writer.save(
+writer.save()
